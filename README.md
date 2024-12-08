@@ -34,10 +34,9 @@ Cosmic Explorer is an immersive web application designed to bring the wonders of
 
 ## Technologies (Proposed)
 - Frontend: React.js
-- Backend: Python (Flask/Django)
-- Database: PostgreSQL
+- Backend: PHP
+- Database: MySQL
 - Authentication: JWT
-- Image Storage: Cloud Storage Solution
 
 ## Getting Started
 1. Clone the repository
