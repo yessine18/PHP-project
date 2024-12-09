@@ -1,14 +1,12 @@
 <?php
-session_start();
-
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
-    header("Location: /app/views/auth/login.php");
+    header("Location: index.php?controller=auth&action=login");
     exit();
 }
 
-// Get the username, with a default value if not set
-$username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
+// Get the username
+$username = $_SESSION['username'] ?? 'Guest';
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,5 +1,5 @@
 <?php
-// Remove session_start() as it's already started in index.php
+// session_start() is already handled in index.php, no need to include it here
 $error = isset($_SESSION['login_error']) ? $_SESSION['login_error'] : '';
 unset($_SESSION['login_error']);
 ?>
@@ -13,7 +13,7 @@ unset($_SESSION['login_error']);
 </head>
 <body>
     <div class="wrapper">
-        <form action="../../public/index.php?controller=auth&action=login" method="POST">
+        <form action="index.php?controller=auth&action=login&redirect=solar_system" method="POST">
             <h2>Sign in to Space</h2>
             
             <?php if (!empty($error)): ?>

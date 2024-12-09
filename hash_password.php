@@ -1,5 +1,5 @@
 <?php
-$password = "18112002"; // Replace with the password you want to use
+$password = "JIJI123"; // Replace with the password you want to use
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 echo "Original password: " . $password . "\n";
 echo "Hashed password: " . $hashed_password . "\n";
