@@ -33,7 +33,7 @@ Cosmic Explorer is an immersive web application designed to bring the wonders of
 - Expert discussions and insights
 
 ## Technologies (Proposed)
-- Frontend: React.js
+- Frontend: HTML, CSS, JavaScript
 - Backend: PHP
 - Database: MySQL
 - Authentication: JWT
