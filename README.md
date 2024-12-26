@@ -20,17 +20,11 @@ Cosmic Explorer is an immersive web application designed to bring the wonders of
   - Upcoming missions
   - Mission details, objectives, and achievements
 
-### 🔭 James Webb Telescope Gallery
-- Curated collection of stunning space images
-- Detailed information about each photograph
-- High-resolution image viewing
-- Scientific context and background for each image
-
 ### 👥 Astronomy Community
 - User registration and membership
-- Community forums
-- Knowledge sharing platform
-- Expert discussions and insights
+- E-commerce
+- Blogs
+- Contact Us
 
 ## Technologies (Proposed)
 - Frontend: HTML, CSS, JavaScript
