@@ -14,12 +14,12 @@ $username = isset($_SESSION['user']['username']) ? $_SESSION['user']['username']
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Solar System</title>
-        <link rel="stylesheet" href="../inc/css/solar_system.css">
+        <link rel="stylesheet" href="../inc/css/landing.css">
     </head>
     <body>
         <div class="banner">
             <video autoplay loop muted plays-inline>
-                <source src="../../inc/ressources/video1.mp4" type="video/mp4">
+                <source src="../../inc/ressources/videoBackground.mp4" type="video/mp4">
             </video>
             <div class="navbar">
                 <ul>

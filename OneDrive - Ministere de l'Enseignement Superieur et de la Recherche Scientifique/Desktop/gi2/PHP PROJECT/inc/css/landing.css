@@ -1,0 +1,247 @@
+*{
+    margin:0px;
+    padding: 0px;
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+
+:root {
+    --primary-color: #FFD700;      /* Golden Yellow */
+    --secondary-color: #FFA500;    /* Orange */
+    --accent-color: #DAA520;       /* Goldenrod */
+    --text-color: #FFFFFF;         /* White */
+    --background-color: #000000;   /* Black */
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.40));
+    background-position: center;
+    background-size: center;
+}
+.navbar{
+    width: 100%;
+    height: 20%;
+    padding: 0px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgba(255, 217, 0, 0);
+    box-shadow: 0 0 15px rgba(255, 217, 0, 0);
+}
+.content h1{
+    margin-bottom: 1rem;
+} 
+.logo{
+    width: 150px;
+    margin-top: -15px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style:disc;
+    display: inline-block;
+    margin: 10px;
+    text-align: -webkit-match-parent;
+    margin-top: -10px;
+}
+.navbar ul li a {
+    text-decoration: wavy;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: 900;
+    padding: 0px;
+    cursor: auto;
+    font-family: 'Rubik', sans-serif;
+    transition: color 1s;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+    transform: scale(1.05);
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.navbar a:hover{
+        color: var(--secondary-color);
+        text-shadow: 0 0 10px rgba(255, 165, 0, 0.7);
+} 
+/* li a:hover {
+    background-color: rgb(0, 225, 255);
+    transition: background-color 0.7s;
+} */
+.button {
+    --color: Goldenrod;
+    --color2: rgb(0, 0, 0);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 85px;
+    border: -40px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight:semi-bold;
+    font-size: 17px;
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    color:rgb(255, 255, 255);
+   }
+   
+   .button::after, .button::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+   }
+   
+   .button::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .button:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .button:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+   }
+   
+   .button:hover {
+    color: var(--color2);
+   }
+   
+   .button:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+   }
+.content{
+    width: 100%;
+    position: absolute;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.content h1{
+    margin-top: 360px;
+    font-size: 50px;
+    font-weight: 600;
+    color:white;
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+}
+.btn {
+  position: relative;
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: 3px solid gold;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.btn:hover {
+  background: gold;
+  box-shadow: 0 0 30px 5px gold;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.btn:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.btn::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.btn:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+.btn a{
+    text-decoration: wavy;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+    transition: color 0.5s;
+}
+.btn:hover a {
+  color: black;
+}
+
+.banner video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media(min-aspect-ratio: 16/9){
+    .banner video{
+        width: 100%;
+        height: auto;
+    }
+}

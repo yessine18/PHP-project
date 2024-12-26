@@ -22,33 +22,52 @@ class SignupController {
             $password = $_POST['password'];
             $role = $_POST['role'];
 
+            // Debug logging
+            error_log("Signup attempt - Email: $email, Username: $username, Role: $role");
+
             if (empty($email) || empty($username) || empty($password) || empty($role)) {
                 $error = "All fields are required.";
-                require_once 'app/view/signup.php';
+                require_once 'app/views/signup.php';
                 exit;
             }
 
-            $existingUser = $this->userModel->findUserByEmail($email);
+            try {
+                $existingUser = $this->userModel->findUserByEmail($email);
+                if ($existingUser) {
+                    throw new Exception("User with this email already exists.");
+                }
 
-            if ($existingUser) {
-                $error = "User with this email already exists.";
-                require_once 'app/view/signup.php';
+                $existingUsername = $this->userModel->findUserByUsername($username);
+                if ($existingUsername) {
+                    throw new Exception("Username already exists.");
+                }
+
+                $insertData = [
+                    'username' => $username,
+                    'email' => $email,
+                    'password' => password_hash($password, PASSWORD_BCRYPT),
+                    'role' => $role
+                ];
+
+                // Debug logging
+                error_log("Insert data: " . print_r($insertData, true));
+
+                if ($this->userModel->insertUser($insertData)) {
+                    // Debug logging
+                    error_log("User inserted successfully");
+                    header('Location: index.php?action=success');
+                    exit;
+                } else {
+                    // Debug logging
+                    error_log("Failed to insert user");
+                    throw new Exception("Unable to create account. Try again.");
+                }
+            } catch (Exception $e) {
+                // Debug logging
+                error_log("Signup error: " . $e->getMessage());
+                $error = $e->getMessage();
+                require_once 'app/views/signup.php';
                 exit;
-            }
-
-            $insertData = [
-                'username' => $username,
-                'email' => $email,
-                'password' => password_hash($password, PASSWORD_BCRYPT),
-                'role' => $role
-            ];
-
-            if ($this->userModel->insertUser($insertData)) {
-                header('Location: index.php?action=success');
-                exit;
-            } else {
-                $error = "Unable to create account. Try again.";
-                require_once 'app/view/signup.php';
             }
         }
     }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="../inc/css/login.css">
+    <link rel="stylesheet" href="../inc/css/Signin.css">
 </head>
 <body>
     <div class="wrapper">
@@ -28,7 +28,7 @@
                 <label for="role">Role:</label>
                 <select name="role" id="role" required>
                     <option value="user">User</option>
-                    <option value="superadmin">Admin</option>
+                    <option value="admin">Admin</option>
                 </select>
             </div>
             <button type="submit">Sign Up</button>

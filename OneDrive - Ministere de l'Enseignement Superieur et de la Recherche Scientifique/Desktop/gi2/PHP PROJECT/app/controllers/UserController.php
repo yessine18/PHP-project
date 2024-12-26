@@ -1,8 +1,20 @@
 <?php
+require_once "config/database.php";
+require_once 'app/models/ProductModel.php';
+
+
 class UserController {
-    public function solarSystem() {
-            include 'app/views/solar_system.php';
+
+    private $productModel;
+
+    public function __construct() {
+        $this->productModel = new ProductModel();
     }
+
+    public function solarSystem() {
+        include 'app/views/solar_system.php';
+    }
+
     public function logout()
     {
         // Destroy the session
@@ -17,7 +29,9 @@ class UserController {
     public function explore() {
         include 'app/views/explore.php';
     }
+    
     public function astronomy() {
-        include 'app/views/CommunityLogin.php';
+        $products = $this->productModel->getAllProducts();
+        include 'app/views/astronomy.php';
     }
 }

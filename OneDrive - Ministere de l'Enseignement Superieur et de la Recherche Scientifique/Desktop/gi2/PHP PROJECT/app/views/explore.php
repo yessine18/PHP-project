@@ -13,7 +13,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <link rel="stylesheet" href="../inc/css/EXPLORE.css">
+  <link rel="stylesheet" href="../inc/css/explore.css">
   <body>
     <nav>
 
@@ -23,15 +23,15 @@
         >HOME</a>
         
         <a href="#apollo11" class="nav-link" onclick="resetDropdown()"
-          >Apollo 11</a
+          >APOLLO 11</a
         >
 
         <a href="#metrics" class="nav-link" onclick="resetDropdown()"
-          >Planet Metrics</a
+          >PLANET METRICS</a
         >
 
         <details>
-          <summary class="planets-dropdown fw-300">Planets</summary>
+          <summary class="planets-dropdown fw-300">PLANETS</summary>
           <ul>
             <li onclick="currentSlide(1) ; moveToPlanetCarousel()">
               <i class="fa-solid fa-shuttle-space"></i>
@@ -282,10 +282,10 @@
     >
       <div class="space-event">
         <div class="space-item">
-          <img src="images/apollo-2.jpg" class="space-image" />
+          <img src="../inc/ressources/apollo-2.jpg" class="space-image" />
         </div>
         <div class="space-item">
-          <img src="images/apollo-1.jpg" class="space-image" />
+          <img src="../inc/ressources/apollo-1.jpg" class="space-image" />
         </div>
         <div class="space-item space-info">
           <h3 class="text-yellow">Apollo 11</h3>
@@ -298,13 +298,13 @@
           </p>
         </div>
         <div class="space-item">
-          <img src="images/apollo-3.jpg" class="space-image" />
+          <img src="../inc/ressources/apollo-3.jpg" class="space-image" />
         </div>
         <div class="space-item">
-          <img src="images/apollo-4.jpg" class="space-image" />
+          <img src="../inc/ressources/apollo-4.jpg" class="space-image" />
         </div>
         <div class="space-item">
-          <img src="images/apollo-5.jpg" class="space-image" />
+          <img src="../inc/ressources/apollo-5.jpg" class="space-image" />
         </div>
       </div>
     </section>
